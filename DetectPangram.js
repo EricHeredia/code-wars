@@ -9,5 +9,5 @@
 // First attempt - 1-2 minutes
 
 function isPangram(string){
-  return [...new Set(string.toLowerCase())].filter(x=> /[a-z]/i.test(x)).length === 26 ? true:false
+  return [...new Set(string.toLowerCase())].filter(x=> /[a-z]/i.test(x)).length === 26
 }
