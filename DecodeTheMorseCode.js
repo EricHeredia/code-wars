@@ -24,13 +24,27 @@
 
 // First attempt - 4-5 minutes
 
-decodeMorse = function(morseCode){
-  let wordBank = morseCode.trim().split('   ')
+//decodeMorse = function(morseCode){
+  //let wordBank = morseCode.trim().split('   ')
   
-  for (let word in wordBank) {
-    let letters = wordBank[word].split(' ')
-    wordBank[word] = letters.map((x, i) => MORSE_CODE[letters[i]]).join('')
+  //for (let word in wordBank) {
+    //let letters = wordBank[word].split(' ')
+    //wordBank[word] = letters.map((x, i) => MORSE_CODE[letters[i]]).join('')
+  //}
+
+  //return wordBank.join(' ')
+//}
+
+// Second attempt - 3-4 minutes
+
+decodeMorse = function(morseCode){
+  const decodeLetter = letter => {
+    return MORSE_CODE[letter]
+  }
+  
+  const decodeWord = word => {
+    return word.split(' ').map(decodeLetter).join('')
   }
 
-  return wordBank.join(' ')
+  return morseCode.trim().split('   ').map(decodeWord).join(' ')
 }
