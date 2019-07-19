@@ -1,4 +1,3 @@
-//Task
 //Your job is to complete the function nbrOfLaps(x, y) that, given the length of the laps for Bob and Charles, finds the number of laps that each jogger has to complete before they meet each other again, at the same time, at the start.
 
 //The function takes two arguments:
