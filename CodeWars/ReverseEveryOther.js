@@ -6,5 +6,5 @@
 // First attempt - 2 minutes
 
 function reverse(str){
-    return str.split(' ').map((x,i) => i % 2 === 0 ? x : x.split('').reverse().join('')).join(' ')
+    return str.split(' ').map((x, i) => i % 2 === 0 ? x : [...x].reverse().join('')).join(' ')
   }
