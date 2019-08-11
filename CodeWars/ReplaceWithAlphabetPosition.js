@@ -12,12 +12,23 @@
 
 // First attempt - 5 minutes
 
-function alphabetPosition(text) {
-  var result = "";
-  for (var i = 0; i < text.length; i++){
-    var code = text.toUpperCase().charCodeAt(i)
-    if (code > 64 && code < 91) result += (code - 64) + " ";
-  }
+//function alphabetPosition(text) {
+  //var result = "";
+  //for (var i = 0; i < text.length; i++){
+    //var code = text.toUpperCase().charCodeAt(i)
+    //if (code > 64 && code < 91) result += (code - 64) + " ";
+  //}
 
-  return result.slice(0, result.length-1);
+  //return result.slice(0, result.length-1);
+//}
+
+// Second attempt - 5 minutes
+
+function alphabetPosition(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z]/g, '')
+    .split('')
+    .map(c => c.charCodeAt(0) - 96)
+    .join(' ');
 }
