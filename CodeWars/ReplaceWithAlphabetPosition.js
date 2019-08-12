@@ -24,11 +24,21 @@
 
 // Second attempt - 5 minutes
 
+//function alphabetPosition(text) {
+  //return text
+    //.toLowerCase()
+    //.replace(/[^a-z]/g, '')
+    //.split('')
+    //.map(c => c.charCodeAt(0) - 96)
+    //.join(' ');
+//}
+
+//Third attempt - 5 minutes
+
 function alphabetPosition(text) {
   return text
     .toLowerCase()
-    .replace(/[^a-z]/g, '')
-    .split('')
-    .map(c => c.charCodeAt(0) - 96)
+    .match(/[a-z]/g)
+    .map(x => x.charCodeAt() - 96)
     .join(' ');
 }
